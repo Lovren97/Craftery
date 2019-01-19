@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/AppCOlorLight">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/story_details_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/AppColor"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:padding="5dp"
+            android:src="@drawable/app_logo_text" />
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nested_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/story_details_toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:background="@color/White">
+
+                <include layout="@layout/layout_slideshow" />
+
+                <Button
+                    android:id="@+id/slide_number"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="75dp"
+                    android:layout_height="25sp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:background="@color/AppGrey"
+                    android:text="1 of 2"
+                    android:textColor="@android:color/background_dark" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/card_background"
+                android:paddingBottom="20dp">
+
+
+                <RelativeLayout
+                    android:id="@+id/profile_image"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="13dp">
+
+                    <View
+                        android:id="@+id/profile_image_circle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/circle" />
+
+                    <TextView
+                        android:id="@+id/profile_image_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="U"
+                        android:textColor="@color/White"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/story_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_toRightOf="@id/profile_image"
+
+
+                    android:fontFamily="@font/doppio_one"
+                    android:text="Username"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="19sp" />
+
+                <ImageView
+                    android:id="@+id/imageView13"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/profile_image"
+
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+
+                    android:layout_marginRight="10dp"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="0dp"
+                    app:srcCompat="@color/AppGrey"></ImageView>
+
+                <TextView
+                    android:id="@+id/story_status"
+                    android:layout_width="383dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="85dp"
+                    android:layout_marginEnd="18dp"
+                    android:fontFamily="@font/doppio_one"
+                    android:text="This field is meant for peoples statuses and their boring shit they post when they buy something from this site."
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/doppio_one"
+                        android:text="Comments"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="0"
+                        android:paddingRight="0dp"
+                        app:srcCompat="@drawable/comment" />
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/comment_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginBottom="50dp"
+                    android:background="@drawable/card_background" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="0sp"
+        android:layout_marginTop="3sp"
+        android:layout_marginLeft="2sp"
+        android:layout_marginRight="2sp"
+        android:background="@color/AppCOlorLight"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_button6"
+            android:layout_marginBottom="3sp">
+
+            <EditText
+                android:id="@+id/addComment"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="12dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:hint="Add a comment..."
+                android:inputType="textCapSentences"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/postBtn"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="65dp"
+                android:layout_height="40dp"
+                android:text="Post"
+                android:textColor="@color/AppColor"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/story_details_back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/story_details_toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginBottom="9dp"
+        app:srcCompat="@drawable/ic_arrow_back_black_24dp"
+        android:clickable="true"/>
+
+
+</RelativeLayout>
+
+
+

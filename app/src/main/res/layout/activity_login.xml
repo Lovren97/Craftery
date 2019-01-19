@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadingEdge="horizontal|vertical"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+
+    <ImageView
+        android:layout_width="120sp"
+        android:layout_height="120sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="165dp"
+        app:srcCompat="@drawable/app_logo_text" />
+
+    <ImageView
+        android:layout_width="175sp"
+        android:layout_height="175sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp"
+        android:adjustViewBounds="false"
+        app:srcCompat="@drawable/app_logo1" />
+
+    <Button
+        android:id="@+id/guest_login"
+        style="@android:style/Widget.Material.Light.Button"
+        android:layout_width="270sp"
+        android:layout_height="33dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="277dp"
+        android:background="@drawable/round_button"
+        android:fontFamily="@font/doppio_one"
+        android:shadowColor="@android:color/darker_gray"
+        android:text="Continue as guest"
+        android:textColor="#4677A5"
+        android:textIsSelectable="false" />
+
+    <Button
+        android:id="@+id/sign_in"
+        style="@android:style/Widget.Material.Light.Button"
+        android:layout_width="270sp"
+        android:layout_height="33dp"
+        android:layout_below="@+id/guest_login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/round_button2"
+        android:fontFamily="@font/doppio_one"
+        android:text="Sign in"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/textView2"
+        style="@android:style/Widget.DeviceDefault.Light.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="399dp"
+        android:fontFamily="@font/doppio_one"
+        android:text="Don't have an account?"
+        android:textColor="@color/White"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/email_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:clickable="true"
+        android:padding="10dp"
+        android:text="Sign up!"
+        android:textColor="#99ebff"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/terms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/doppio_one"
+        android:text="@string/terms"
+        android:textColor="#ffffff"/>
+
+</RelativeLayout>

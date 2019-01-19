@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.HomeActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/AppColor"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:padding="5dp"
+                android:src="@drawable/app_logo_text" />
+
+            <ImageView
+                android:id="@+id/logout_image"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="right|center"
+                android:layout_marginRight="10dp"
+                android:clickable="true"
+                android:src="@drawable/ic_exit_to_app_black_24dp" />
+
+
+        </FrameLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+        <!-- Middle section (body) -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/AppCOlorLight">
+
+
+        <include layout="@layout/layout_center_viewpager"/>
+
+
+    </RelativeLayout>
+
+    <!-- bottom toolbar -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/layout_bottom_tabs"/>
+
+    </RelativeLayout>
+
+
+
+
+
+
+</LinearLayout>

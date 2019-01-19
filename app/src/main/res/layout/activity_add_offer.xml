@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.AddOfferActivity"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/add_offer_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/AppColor"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:navigationIcon="@drawable/ic_arrow_back_black_24dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="100dp"
+            android:padding="5dp"
+            android:src="@drawable/app_logo_text" />
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:background="@color/AppCOlorLight"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="15dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp">
+                <ImageView
+                    android:id="@+id/imageIgnore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_add_a_photo_black_24dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_below="@id/imageIgnore"
+                    android:text="Add photo"
+                    android:textColor="#000"/>
+                <ImageView
+                    android:id="@+id/imageHolder"
+                    android:layout_width="match_parent"
+                    android:scaleType="centerCrop"
+                    android:layout_height="match_parent"/>
+
+            </RelativeLayout>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Offer details"
+                android:layout_marginLeft="5dp"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/background_dark"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/card_background">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:text="Name:"
+                            android:textSize="16sp"/>
+                        <LinearLayout
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:layout_width="0px"
+                            android:layout_height="0px"/>
+                        <EditText
+                            android:id="@+id/offerName"
+                            android:layout_width="match_parent"
+                            android:inputType="textCapSentences"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:text="Specification:"
+                            android:textSize="16sp"/>
+                        <EditText
+                            android:id="@+id/offerSpecivication"
+                            android:layout_width="match_parent"
+                            android:inputType="textCapSentences"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="10dp"
+                            android:layout_marginRight="5dp"
+                            android:text="Description:"
+                            android:layout_gravity="start"
+                            android:textSize="16sp"/>
+                        <EditText
+                            android:id="@+id/offerDescription"
+                            android:inputType="textMultiLine|textCapSentences"
+                            android:lines="4"
+                            android:maxLines="5"
+                            android:gravity="start"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:text="Price (in EUR):"
+                            android:textSize="16sp"/>
+                        <EditText
+                            android:id="@+id/offerPrice"
+                            android:layout_width="match_parent"
+                            android:inputType="number"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add multiple styles"
+                android:layout_marginLeft="5dp"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/background_dark"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="5dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/card_background">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="20dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:text="Name:"
+                            android:textSize="16sp"/>
+                        <LinearLayout
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:layout_width="0px"
+                            android:layout_height="0px"/>
+                        <EditText
+                            android:id="@+id/styleName"
+                            android:layout_width="match_parent"
+                            android:inputType="textCapSentences"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:text="Price (in EUR):"
+                            android:textSize="16sp"/>
+                        <EditText
+                            android:id="@+id/stylePrice"
+                            android:layout_width="match_parent"
+                            android:inputType="number"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <Button
+                        style="@android:style/Widget.Material.Light.Button"
+                        android:background="@drawable/round_button4"
+                        android:id="@+id/addStyleButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="+Add style"/>
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add multiple dimenstions"
+                android:layout_marginLeft="5dp"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/background_dark"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="5dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/card_background">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="20dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:text="Name:"
+                            android:textSize="16sp"/>
+                        <LinearLayout
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:layout_width="0px"
+                            android:layout_height="0px"/>
+                        <EditText
+                            android:id="@+id/dimensionName"
+                            android:layout_width="match_parent"
+                            android:inputType="textCapSentences"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <Button
+                        style="@android:style/Widget.Material.Light.Button"
+                        android:background="@drawable/round_button4"
+                        android:id="@+id/addDimensionButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="+Add dimension"/>
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/uploadOffer"
+                style="@android:style/Widget.Material.Light.Button"
+                android:background="@drawable/round_button4"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Upload offer"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</LinearLayout>

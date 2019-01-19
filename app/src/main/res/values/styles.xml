@@ -1,0 +1,33 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+
+    <!-- Login theme -->
+
+    <style name="RegisterTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/AppColor</item>
+        <item name="colorPrimaryDark">@color/White</item>
+        <item name="colorAccent">@color/AppColor</item>
+        <item name="android:statusBarColor">@color/AppColor</item>
+        <item name="android:windowBackground">@color/AppColor</item>
+    </style>
+
+    <style name="InputTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/AppColor</item>
+        <item name="colorPrimaryDark">@color/White</item>
+        <item name="colorAccent">@color/DarkWhite</item>
+        <item name="android:statusBarColor">@color/AppColor</item>
+
+        <item name="colorControlActivated">@color/DarkWhite</item>
+        <item name="colorControlNormal">@color/DarkWhite</item>
+        <item name="colorControlHighlight">@color/DarkWhite</item>
+
+    </style>
+
+    <style name="TabLayoutStyle" parent="Base.Widget.Design.TabLayout">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+
+</resources>
